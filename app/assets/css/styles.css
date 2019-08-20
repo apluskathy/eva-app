@@ -1,8 +1,11 @@
 @font-face {
-  font-family: 'rubikregular';
-  src: url("../../fonts/rubik-regular-webfont.woff2") format("woff2"), url("../../fonts/rubik-regular-webfont.woff") format("woff"), url("../../fonts/rubik-regular.ttf") format("ttf");
+  font-family: 'Rubik';
+  src: url("rubik-regular.rubik.eot"), url("rubik-regular.rubik.eot?#iefix") format("embedded-opentype"), url("rubik-regular-webfont.woff2") format("woff2"), url("rubik-regular-webfont.woff") format("woff"), url("rubik-regular.ttf") format("ttf"), url("rubik-regular.rubik.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+body {
+  font-family: "Rubik", sans-serif; }
 
 @font-face {
   font-family: 'Material Icons';
@@ -23,11 +26,117 @@
   white-space: nowrap;
   direction: ltr; }
 
+@media (min-width: 768px) {
+  .card__content {
+    flex-grow: 2; }
+  .card__price {
+    flex-grow: 0.5; }
+    .card__price .card__price--info {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: none !important;
+      border-top: none !important;
+      border-bottom: none !important; }
+  .card__content-header {
+    border-radius: 8px 0 0 0 !important; }
+  .btn-text {
+    width: 100%; }
+  .card__price-details {
+    padding: 0 1rem !important; } }
+
+.card__content-header {
+  background: #ccc;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px 8px 0 0;
+  padding: .4rem 1rem;
+  height: 2rem;
+  font-size: 0.8rem; }
+  .card__content-header .header-state i {
+    font-size: 1rem; }
+  .card__content-header .header-state p {
+    display: inline-block;
+    font-weight: 700; }
+  .card__content-header.--header {
+    border-radius: 0; }
+
+.card__content--info {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center; }
+  .card__content--info .card__content-airline {
+    display: grid;
+    grid-template-columns: 1fr auto; }
+    .card__content--info .card__content-airline div img {
+      margin-right: 8px; }
+    .card__content--info .card__content-airline div p {
+      display: inline-block; }
+    .card__content--info .card__content-airline div i {
+      color: #4300D2; }
+  .card__content--info .card__content-option {
+    margin-right: 1.5rem; }
+  .card__content--info .card__content--itinerary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto; }
+    .card__content--info .card__content--itinerary p {
+      margin-bottom: 0;
+      color: #666;
+      font-size: .8rem; }
+    .card__content--info .card__content--itinerary i {
+      color: #03A691; }
+    .card__content--info .card__content--itinerary .time-flight {
+      font-weight: 700;
+      color: #444;
+      font-size: 1.2rem; }
+  .card__content--info .card__content-timeflight {
+    font-size: 0.8rem; }
+
+.card__content-points {
+  border-top: 1px solid #ccc;
+  padding: 1rem 2rem; }
+  .card__content-points p {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    color: #666; }
+
+.card__price .card__price--info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  border-bottom: 1px solid #CCC;
+  border-top: 1px solid #CCC; }
+  .card__price .card__price--info p {
+    margin-bottom: 0; }
+  .card__price .card__price--info .price-title {
+    font-size: 0.8rem;
+    color: #666; }
+  .card__price .card__price--info .price-info {
+    color: #444;
+    font-size: 1.5rem;
+    font-weight: 700; }
+  .card__price .card__price--info .price-mark {
+    color: #444;
+    font-size: 0.8rem;
+    font-weight: 700; }
+
+.card__price .price-select {
+  text-align: right; }
+  .card__price .price-select .btn-text {
+    height: 36px;
+    padding: 0 16px;
+    font-size: 1rem;
+    line-height: 36px;
+    border: 1px solid;
+    border-radius: 100px;
+    background: #4300D2;
+    color: #FFF;
+    font-weight: 700;
+    margin-top: 1rem; }
+
 @media (max-width: 768px) {
   .card__container {
     border: 1px solid #CCC;
     border-radius: 8px;
-    font-family: "rubikregular", sans-serif;
     height: auto;
     margin: 2rem; }
     .card__container .card__galery div {
@@ -132,7 +241,6 @@
     display: flex;
     border: 1px solid #CCC;
     border-radius: 8px;
-    font-family: "rubikregular", sans-serif;
     height: auto;
     margin: 2rem; }
     .card__container .card__galery div {
@@ -231,9 +339,9 @@
           padding: 0 16px;
           font-size: 1rem;
           line-height: 36px;
-          width: 100%;
           border: 1px solid;
           border-radius: 100px;
+          width: 100%;
           background: #4300D2;
           color: #FFF;
           font-weight: 700;

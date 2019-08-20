@@ -4,7 +4,6 @@
     .card__container {
         border: 1px solid $light-gray;
         border-radius: 8px;
-        font-family: $font-rubik;
         height: auto;
         margin: 2rem;
         .card__galery {
@@ -18,13 +17,7 @@
             }
             .img-1 {
                 background-image: url(../../assets/images/hotel-1.png);
-            }
-            // .img-2 {
-            //     background-image: url(../../assets/images/hotel-1.png);
-            // }
-            // .img-3 {
-            //     background-image: url(../../assets/images/hotel-1.png);
-            // }   
+            } 
         }
         .card__content-description {
             padding: $padding-card;
@@ -133,7 +126,6 @@
         display: flex;
         border: 1px solid $light-gray;
         border-radius: 8px;
-        font-family: $font-rubik;
         height: auto;
         margin: 2rem;
         .card__galery {
@@ -147,13 +139,7 @@
             }
             .img-1 {
                 background-image: url(../../assets/images/hotel-1.png);
-            }
-            // .img-2 {
-            //     background-image: url(../../assets/images/hotel-1.png);
-            // }
-            // .img-3 {
-            //     background-image: url(../../assets/images/hotel-1.png);
-            // }   
+            }  
         }
         .card__content-description {
             padding: $padding-card;
@@ -245,6 +231,7 @@
                 .price-button {
                     .btn-text {
                         @include btn;
+                        width: 100%;
                         background: $color-main;
                         color: $white;
                         font-weight: $bold;

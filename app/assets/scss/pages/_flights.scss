@@ -1,0 +1,135 @@
+@include web {
+    .card__content {
+        flex-grow: 2;
+    }
+    .card__price {
+        flex-grow: 0.5;
+        .card__price--info {
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: none !important;
+            border-top: none !important;
+            border-bottom: none !important;
+        }
+    }
+    .card__content-header {
+        border-radius: 8px 0 0 0 !important;
+    }
+    .btn-text {
+        width: 100%;
+    }
+    .card__price-details {
+        padding: 0 1rem !important;
+    }
+}
+
+
+.card__content-header {
+    background: #ccc;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px 8px 0 0;
+    padding: .4rem 1rem;
+    height: 2rem;
+    font-size: $font-14;
+    .header-state {
+        i {
+            font-size: $font-16;
+        }
+        p {
+            display: inline-block;
+            font-weight: $bold;
+        }
+    }
+    &.--header {
+        border-radius: 0;
+    }
+}
+.card__content--info {
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    .card__content-airline {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        div {
+            img {
+                margin-right: 8px;
+            }
+            p {
+                display: inline-block;
+            }
+            i {
+                color: $color-main;
+            }
+        }
+    }
+    .card__content-option {
+        margin-right: 1.5rem;
+    }
+    .card__content--itinerary {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr auto;
+        p {
+            margin-bottom: 0;
+            color: $gray;
+            font-size: .8rem;
+        }
+        i {
+            color: $green;
+        }
+        .time-flight {
+            font-weight: $bold;
+            color: $dark-gray;
+            font-size: $font-18;
+        }
+    }
+    .card__content-timeflight {
+        font-size: $font-14;
+    }
+}
+.card__content-points {
+    border-top: 1px solid #ccc;
+    padding: 1rem 2rem;
+    p {
+        margin-bottom: 0;
+        font-size: $font-14;
+        color: $gray;
+    }
+}
+.card__price {
+    .card__price--info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+        border-bottom: 1px solid $light-gray;
+        border-top: 1px solid $light-gray;
+        p {
+            margin-bottom: 0;
+        }
+        .price-title {
+            font-size: $font-14;
+            color: $gray;
+        }
+        .price-info {
+            color: $dark-gray;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .price-mark {
+            color: $dark-gray;
+            font-size: $font-14;
+            font-weight: $bold;
+        }
+    }
+    .price-select {
+        text-align: right;
+        .btn-text {
+            @include btn;
+            background: $color-main;
+            color: $white;
+            font-weight: $bold;
+            margin-top: 1rem;
+        }
+    }
+}
