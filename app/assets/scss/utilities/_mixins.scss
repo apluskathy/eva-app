@@ -1,0 +1,86 @@
+
+// Small tablets and large smartphones
+$screen-sm: 576px;
+// Small tablets
+$screen-md: 768px;
+// Tablets and small desktops
+$screen-lg: 992px;
+// Large tablets and desktops
+$screen-xl: 1200px;
+
+// Small devices and Medium devices
+@mixin mobile {
+    @media (max-width: #{$screen-md}) {
+        @content;
+    }
+ } 
+ // Medium devices and Large devices
+ @mixin web {
+    @media (min-width: #{$screen-md}){
+        @content;
+    }
+ }
+ 
+ // Mixin components
+ @mixin raiting {
+    background: $green;
+    width: 24px;
+    height: 20px;
+    border-radius: 4px;
+    color: $white;
+    font-size: $font-12;
+    font-weight: $bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin label {
+    display: inline-flex;
+    align-items: center;
+    max-width: 210px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 4px;
+    border: 1px solid $light-gray;
+    padding: .3rem;
+    font-size: $font-12;
+    font-weight: $bold;
+}
+
+@mixin title {
+    color: $dark-gray;
+    font-size: $font-14;
+    
+}
+
+@mixin price {
+    color: $dark-gray;
+    font-size: $font-24;
+    font-weight: $bold;
+}
+
+@mixin details {
+    color: $gray;
+    font-size: $font-14;
+}
+
+@mixin link {
+    color: $color-main;
+    font-size: $font-14;
+    font-weight: $bold;
+    &:hover {
+        color: $dark-violet;
+    }
+    
+}
+
+@mixin btn {
+    height: 36px;
+    padding: 0 16px;
+    font-size: $font-16;
+    line-height: 36px;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 100px;
+}

@@ -1,5 +1,15 @@
-div {
-    p {
-    background: green;
-    }
-}
+@import
+    'utilities/_functions.scss',
+    'utilities/_mixins.scss',
+    'utilities/_variables.scss',
+
+    'base/_fonts.scss',
+    'base/_icons.scss',
+
+    'pages/_flights.scss',
+    'pages/_hotels.scss',
+
+    'vendors/bootstrap/scss/bootstrap.scss';
+
+
+    
